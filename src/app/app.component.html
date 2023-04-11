@@ -1,3 +1,20 @@
+<h1>My Counter</h1>
 <app-my-counter></app-my-counter>
+<hr>
+
+<h1>Books</h1>
+<app-book-list
+  class="book-list" [books]="(books$ | async)!"
+  (add)="onAdd($event)">
+</app-book-list>
+<hr>
+
+<h1>My Collection</h1>
+<app-book-collection
+  class="book-collection"
+  [books]="(bookCollection$ | async)!"
+  (remove)="onRemove($event)">
+</app-book-collection>
+<hr>
 
 <router-outlet></router-outlet>
