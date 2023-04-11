@@ -15,6 +15,7 @@ import { LoginPageComponent } from './features/auth/login-page/login-page.compon
 import {ReactiveFormsModule} from '@angular/forms';
 import {loginReducer} from './features/auth/state/auth.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {scoreboardReducer} from './features/scoreboard/state/scoreboard.reducer';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
       count: counterReducer,
       books: booksReducer,
       collection: collectionReducer,
-      login: loginReducer
+      login: loginReducer,
+      scoreBoard: scoreboardReducer
     }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
